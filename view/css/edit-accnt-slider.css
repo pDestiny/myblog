@@ -1,0 +1,53 @@
+.edit-form-slider-cnt {
+    display: flex;
+}
+.flex-inside-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+.flex-inside-2 {
+    flex: 2;
+    position:relative;
+    overflow: hidden;
+}
+label[for*=btn] {
+    display: block;
+}
+
+.btn-form {
+    box-sizing: border-box;
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.flex-inside-2  form {
+    position: absolute;
+    top:-30%;
+    transform: translateY(-50%);
+    transition: top .8s;
+    -webkit-transition: top .8s;
+    transition-timing-function: ease;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.flex-inside-2 form input {
+    width:90%;
+}
+
+.flex-inside-2 form label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-group > #btn-1-form {
+    top: 45%;
+}
+
+

@@ -1,0 +1,65 @@
+{{>admin_meta}}
+<link href="/view/CoolAdmin/css/article-form.css" rel="stylesheet" media="all">
+</head>
+
+<body class="animsition">
+    {{>message_boxes}}
+    <div class="page-wrapper">
+        {{>admin_header_mobile}} {{>admin_menu_sidebar}}
+        <div class="page-container">
+            {{>admin_header_desktop}}
+            <div class="main-content">
+                <div class="row article-form-cnt">
+                    <div class="col">
+                        <div class="form_main">
+                            <h4 class="heading">
+                                <strong>Article Form</strong>
+                            </h4>
+                            <div class="form">
+                                <form action="/controller/admin/writeArticle.php" method="post" id="article-form" name="contactFrm">
+                                    {{#editMode}}
+                                    <input type="text" placeholder="Title" value="{{title}}" name="title" class="txt">
+                                    <input type="text" placeholder="Sub Title" value="{{subtitle}}" name="subtitle" class="txt">
+                                    <div class="preview-title-box">
+                                        <div class="content-title">Content</div>
+                                        <div class="preview-title">Markdown Preview</div>                                    
+                                    </div>
+                                    <div class="text-area">
+                                        <textarea name="content" class="txt_3" data-is-working='N'>{{mdContent}}</textarea>
+                                        <div class="preview">{{parsedContent}}</div>
+                                    </div>
+
+                                    {{/editMode}}
+                                    {{^ editMode}}
+                                    <input type="text" placeholder="Title" value="{{title}}" name="title" class="txt">
+                                    <input type="text" placeholder="Sub Title" value="{{subtitle}}" name="subtitle" class="txt">
+                                    <div class="preview-title-box">
+                                        <div class="content-title">Content</div>
+                                        <div class="preview-title">Markdown Preview</div>                                    
+                                    </div>
+                                    <div class="text-area">
+                                        <textarea name="content" class="txt_3" rows="30" data-is-working='N'>{{content}}</textarea>
+                                        <div class="preview"></div>                                        
+                                    </div>
+                                    {{/ editMode}}
+                                </form>
+                                <div class="btn-group">
+                                    {{#editMode}}
+                                    <button class="txt2 article-edit" data-dashboard-id={{id}}>Edit</button>
+                                    {{/editMode}} {{^ editMode}}
+                                    <button class="txt2 article-submit">Submit</button>
+                                    {{/ editMode}}
+                                    <button class="txt2 article-cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{{>admin_scripts}}
+<script src="/view/CoolAdmin/js/article_form.js"></script>
+
+</html>

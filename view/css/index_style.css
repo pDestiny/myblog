@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.alert {
+    position: fixed;
+    z-index: 1000000;
+    width: 100%;
+    top: -100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.reset-pw-form-cnt {
+    width: 50%;
+    height:650px;
+}
+
+.reset-pw-form-nt > form {
+    margin-top: 50px;
+}
+
+.reset-pw-form-cnt > form > .form-group {
+    margin: 60px 0;
+}
+
+.reset-pw-form-cnt .reset-pw-submit {
+    margin-right: 10px;
+}
+
+.article .html-content {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.article .html-content pre {
+    background-color: lightgray;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    color:black;
+}
+
+.article .html-content ol, article .html-content ul {
+    margin-left: 30px;
+}
+/* reply start */
+.reply .btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reply .btn-group .btn {
+    border-radius: 5px;
+    padding: 3px 4px;
+    margin-bottom: 5px;
+}
+
+.reply .btn-group .btn:nth-of-type(2) {
+    margin-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.reply .btn-group .btn:first-child {
+    margin-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.reply .btn-group .btn:last-child {
+    margin-right: 5px;
+}
+
+.card.modify textarea[name='content'] {
+    width: 100%;
+}
+
+.reply.template {
+    display: none;
+}
+
+.reply .card {
+    display: none;
+}
+
+
+.reply[data-mode="view"] .card.view {
+    display: block;
+}
+
+.reply[data-mode="modify"] .card.modify {
+    display: block;
+}
+
+.reply[data-mode="reply-to"] .card.reply-to-form, .reply[data-mode="reply-to"] .card.view {
+    display: block;
+}
+
+.write-reply-form-box .btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.write-reply-form-box .btn-group > .btn {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 3px 4px;
+}
+
+.reply[data-reply-level] {
+    width: 90%;
+}
+.reply[data-reply-level='1'] {
+    width: 100%;
+}
+.reply[data-reply-level="2"] {
+    width: 95%;
+}
+.reply[data-reply-level="3"] {
+    width: 90%;
+}
+
+.reply-list .reply {
+    float: right;
+}
+
+.card-header {
+    font-size: .8em;
+}
+.card-body {
+    font-size: .9em;
+}
+
+li.nav-item > a.nav-link {
+    cursor: pointer;
+}
+
+/* reply end */
+
+/* editAccountModal start */
+
+#editAccountModal form[data-type="password"] > label {
+    font-size: 1em;
+}

@@ -1,0 +1,36 @@
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="register-form">
+          <div class="form-group">
+            <label for="register-email" class="col-form-label">Email:</label>
+            <input type="email" class="form-control email" id="register-email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="nickname" class="col-form-label">Nickname:</label>
+            <input class="form-control password1" type="text" name="nickname" id='nickname' placeholder="Between 6 ~ 20 characters and must be alphabet or numbers">
+          </div>
+          <div class="form-group">
+            <label for="password1" class="col-form-label">Password:</label>
+            <input class="form-control password1" type="password" name="passwprd1" id='password1' placeholder="Between 8 ~ 30 character">
+          </div>
+          <div class="form-group">
+            <label for="password2" class="col-form-label">Confirm-Password:</label>
+            <input class="form-control password2" type="password" name="password2" id="password2" placeholder="Enter password again">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary submit">Submit</button>
+        <button type="button" class="btn btn-primary close-modal" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

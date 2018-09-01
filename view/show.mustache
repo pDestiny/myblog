@@ -1,0 +1,102 @@
+{{>meta}}
+
+<body>
+    {{>message_boxes}}
+    <!-- Navigation -->
+    {{>navbar}}
+
+    <!-- Page Header -->
+    {{>header}}
+    <!-- Main Content -->
+    <div class="container">
+        <div class="article" data-dashboard-id="{{id}}" data-article-writer="{{nickname}}">
+            <div class="row">
+                <div class="col-lg-9 col-md-10 mx-auto">
+                    <div class="html-content">
+                        {{htmlContent}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="col-lg-9 col-md-10 mx-auto">
+            <div class="reply template" 
+                data-mode="view" 
+                data-reply-id='' 
+                data-writer='' 
+                data-content='' 
+                data-reply-to='' 
+                data-reply-to-user = '' 
+                data-reply-level=''>
+                <div class="card view">
+                    <div class="card-header">
+                        Writer :
+                        <span></span>&nbsp;&nbsp;&nbsp;
+                        &rarrhk;Reply To : <span class="reply-to"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="content"></div>
+                    </div>
+                    <hr>
+                    <div class="btn-group">
+                        <div class="btn btn-primary reply-reply">Reply</div>
+                        <div class="btn btn-warning reply-edit">Edit</div>
+                        <div class="btn btn-danger reply-delete">Delete</div>
+                    </div>
+                </div>
+                <div class="card modify">
+                    <div class="card-header">
+                        Writer :
+                        <span></span>&nbsp;&nbsp;&nbsp;
+                        &rarrhk;ReplyTo : 
+                        <span></span>
+                    </div>
+                    <div class="card-body">
+                        <textarea name="content" placeholder="Content"></textarea>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn btn-primary reply-submit">Submit</div>
+                        <div class="btn btn-dark reply-cancel">Cancel</div> 
+                    </div>
+                </div>
+                <div class="card reply-to-form">
+                    <div class="card-header">
+                        Writer :
+                        <span></span>
+                        &nbsp;&nbsp;&nbsp;
+                        &rarrhk;Reply To : <span class="reply-to"></span>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="w-100" name="content" placeholder="Content"></textarea>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn btn-primary reply-submit">Submit</div>
+                        <div class="btn btn-dark reply-cancel">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="write-reply-form-box">
+                <div class="card modify">
+                    <div class="card-header">
+                        Writer :
+                        <span></span>
+                    </div>
+                    <div class="card-body">
+                        <textarea name="content" placeholder="Content"></textarea>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn btn-primary reply-submit">Submit</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reply-list"></div>
+        </div>
+    </div>
+    {{>login_modal}} {{>register_modal}} {{>logout_modal}} {{>edit_account_modal}}
+
+    <!-- basic scripts -->
+    {{>scripts}}
+    <script src="/view/js/show.js"></script>
+</body>
+
+</html>

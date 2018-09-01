@@ -1,0 +1,97 @@
+td {
+    opacity: 0.9;
+    text-align: center !important;
+}
+th {
+    text-align: center;
+}
+
+#account-btn {
+    color: white;
+}
+
+.header-desktop .header-button {
+    height: 35px;
+}
+
+.alert {
+    position: fixed;
+    z-index: 1000000;
+    width: 100%;
+    top: -100px;
+}
+
+@media(min-width: 992px) {
+    .header-desktop .header-button {
+        height: 70px;
+    }  
+}
+.preview {
+    height: 500px;
+    overflow: scroll;
+}
+.text-area {
+    display: flex;
+}
+.text-area textarea[name="content"] {
+    height: 500px;
+}
+
+.text-area > * {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.preview-title-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.preview-title-box > * {
+    width: 50%;
+    text-align: center;
+}
+
+.text-area > div {
+    background-color: white;
+}
+
+.preview ol, .preview ul {
+    margin-left: 45px;
+}
+
+.preview pre {
+    background-color: lightgray;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    color:black !important;
+}
+
+.preview * {
+    margin-top: 7px;    
+}
+
+.dashboard-table-box {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.dashboard-table {
+    width: 100%;
+}
+
+.dashboard-table span.title, .dashboard-table span.subtitle {
+    width: 150px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.dashboard-table span.written {
+    white-space: nowrap;
+}
+
+

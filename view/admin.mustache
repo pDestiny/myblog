@@ -1,0 +1,50 @@
+{{>admin_meta}}
+</head>
+
+<body class="animsition">
+    {{>delete_modal}}
+    {{>message_boxes}}
+    <div class="page-wrapper">
+        {{>admin_header_mobile}} {{>admin_menu_sidebar}}
+        <div class="page-container">
+            {{>admin_header_desktop}}
+            <div class="main-content">
+                <div class="dashboard-table-box">
+                    <table class="dashboard-table table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">TITLE</th>
+                            <th scope="col">SUBTITLE</th>
+                            <th scope="col">NICKNAME</th>
+                            <th scope="col">WRITTEN</th>
+                            <th scope="col">EDIT</th>
+                            <th scope="col">DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# dashboard-items}}
+                            {{# .}}
+                        <tr>
+                            <td><span>{{ID}}</span></td>
+                            <td><span class="title">{{TITLE}}</span></td>
+                            <td><span class="subtitle">{{SUBTITLE}}</span></td>
+                            <td><button class="btn btn-light writer-popover" data-user-id="{{NICKNAME}}" data-container="body" data-toggle="popover" data-placement="right" data-content="">WRITER</button></td>
+                            <td><span class="written">{{WRITTEN}}</span></td>
+                            <td><button class="dashboard-edit-btn btn btn-warning" data-dashboard-id="{{ID}}">EDIT<button></td>    
+                            <td><button class="dashboard-delete-btn btn btn-danger" data-dashboard-id="{{ID}}" data-toggle="modal" data-target="#deleteModal">DELETE<button></td>
+                        </tr>
+                            {{/ .}}
+                        {{/ dashboard-items}}
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{{>admin_scripts}}
+<script src="/view/CoolAdmin/js/popover.js"></script>
+
+</html>

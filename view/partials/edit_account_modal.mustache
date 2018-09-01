@@ -1,0 +1,43 @@
+<div class="modal fade" id="editAccountModal" tabindex="-1" role="dialog" aria-labelledby="editAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editAccountModalLabel">Edit Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="edit-form-slider-cnt" data-is-working='no'>
+                    <div class="flex-inside-1">
+                        <button class='btn btn-info btn-form email-btn' id='btn-1'>EMAIL</button>
+                        <button class='btn btn-info btn-form nickname-btn' id='btn-2'>NICKNAME</button>
+                        <button class='btn btn-info btn-form password-btn' id='btn-3'>PASSWORD</button>
+                    </div>
+                    <div class="flex-inside-2">
+                        <div class="form-group" data-is-working="no">
+                            <form action="" class="" data-type='email' id="btn-1-form">
+                                <label for="btn1-email">Email : </label>
+                                <input type="email" class='form-control' id="btn1-email">
+                            </form>
+                            <form action="" class="hidden" data-type='nickname' id="btn-2-form">
+                                <label for="btn2-nickname">Nickname : </label>
+                                <input type="text" class='form-control' id="btn2-nickname">
+                            </form>
+                            <form action="" class="hidden" data-type='password' id="btn-3-form">
+                                <label for="btn3-password1">Password : </label>
+                                <input type="password" class='form-control' id="btn3-password1">
+                                <label for="btn3-password2">Confirm Password : </label>
+                                <input type="password" class='form-control' id="btn3-password2">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary change" data-type='email'>Change</button>
+                <button type="button" class="btn btn-primary close-modal" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

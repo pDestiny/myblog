@@ -1,0 +1,65 @@
+{{>meta}}
+
+<body>
+  {{>message_boxes}}
+  <!-- Navigation -->
+  {{>navbar}}
+
+  <!-- Page Header -->
+  {{>header}}
+  <!-- Main Content -->
+  <div class="container">
+    {{# dashboard-items}} {{# .}}
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="/controller/show.php?id={{ID}}">
+            <h2 class="post-title">
+              {{TITLE}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{SUBTITLE}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <strong class="writer">{{NICKNAME}}
+              </strong>
+                on <span class="written">{{WRITTEN}}<span></p>
+        </div>
+        <hr>
+      </div>
+      <hr>
+    </div>
+    {{/ .}} {{/ dashboard-items}}
+    <div class="row post-template d-none">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="/controller/show.php?id=">
+            <h2 class="post-title">
+            </h2>
+            <h3 class="post-subtitle">
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <strong class="writer">
+              </strong>
+                on <span class="written"></span></p>
+        </div>
+        <hr>
+      </div>
+      <hr>
+    </div>
+    <!-- Pager -->
+  </div>
+  <div class="container">
+  <div class="clearfix">
+      <btn class="btn btn-primary float-right older-post-btn" data-start="5" data-end="10">Older Posts &rarr;</a>
+  </div>
+  </div>
+  {{>login_modal}} {{>register_modal}} {{>logout_modal}} {{>edit_account_modal}}
+  <hr>
+  <!-- basic scripts -->
+  {{>scripts}}
+  <script src="/view/js/home.js"></script>
+</body>
+</html>
