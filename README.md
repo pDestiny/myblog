@@ -3,38 +3,26 @@
 데이터베이스 스키마
 
 1. DASHBOARD
-    <table>
-        <thead>
-            <th>ID(INT)</th>
-            <th>TITLE(VARCHAR)</th>
-            <th>NICKNAME(INT)</th>
-            <th>WRITTEN(TIMESTAMP)</th>
-            <th>MD_CONTENT(TEXT)</th>
-            <th>HTML_CONTENT(TEXT)</th>
-        </thead>
-    </table>
+    - ID(INT)
+    - TITLE(VARCHAR)
+    - NICKNAME(INT)
+    - WRITTEN(TIMESTAMP)
+    - MD_CONTENT(TEXT)
+    - HTML_CONTENT(TEXT)
 2. USERS
-    <table>
-        <thead>
-            <th>USER_ID(INT)</th>
-            <th>EMAIL(VARCHAR)</th>
-            <th>PASSWORD(VARCHAR)</th>
-            <th>PW_RECOVER_CD(VARCHAR)</th>
-            <th>POSITION(VARCHAR)</th>
-        </thead>
-    </table>
+    - USER_ID(INT)
+    - EMAIL(VARCHAR)
+    - PASSWORD(VARCHAR)
+    - PW_RECOVER_CD(VARCHAR)
+    - POSITION(VARCHAR)
 3. REPLY
-    <table>
-        <thead>
-            <th>REPLY_ID(INT)</th>
-            <th>DASH_ID(INT)</th>
-            <th>USER_ID(INT)</th>
-            <th>CONTENT(TEXT)</th>
-            <th>REPLY_TO(INT)</th>
-            <th>REPLY_LEVEL(INT)</th>
-            <th>REPLY_TO_USER(VARCHAR)</th>
-        </thead>
-    </table>
+    - REPLY_ID(INT)
+    - DASH_ID(INT)
+    - USER_ID(INT)
+    - CONTENT(TEXT)
+    - REPLY_TO(INT)
+    - REPLY_LEVEL(INT)
+    - REPLY_TO_USER(VARCHAR)
 
 ## 블로그에서 가장 신경쓴 부분
 
@@ -56,7 +44,8 @@
         //사용자 버튼 클릭 이벤트 리스너
         $('.btn-form').on('click', function () {
 
-            //슬라이더 작동중에 방해를 막기위한 if 구문
+            //슬라이더 작동중에 방
+            해를 막기위한 if 구문
             if($editFormSliderCnt.data('isWorking') === 'yes') {
                 return;
             }
